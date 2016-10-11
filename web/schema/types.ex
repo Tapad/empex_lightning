@@ -14,6 +14,7 @@ defmodule Empex.Schema.Types do
     field :first_name, :string
     field :last_name, :string
     field :username, :string
+    field :email, :string
     field :inserted_at, :integer
   end
 
