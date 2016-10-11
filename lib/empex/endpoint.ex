@@ -25,6 +25,9 @@ defmodule Empex.Endpoint do
     pass: ["*/*"],
     json_decoder: Poison
 
+  plug Absinthe.Plug,
+    schema: Empex.Schema
+
   plug Plug.MethodOverride
   plug Plug.Head
 
@@ -36,5 +39,5 @@ defmodule Empex.Endpoint do
     key: "_empex_key",
     signing_salt: "JS2dHF/3"
 
-  plug Empex.Router
+  # plug Empex.Router
 end

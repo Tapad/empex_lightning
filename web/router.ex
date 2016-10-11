@@ -8,4 +8,7 @@ defmodule Empex.Router do
   scope "/api", Empex do
     pipe_through :api
   end
+
+  # forward "/graphql", Absinthe.Plug,
+  #   schema: Empex.Web.Schema
 end
