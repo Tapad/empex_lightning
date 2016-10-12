@@ -1,6 +1,5 @@
 defmodule Empex.AuthorResolver do
   alias Empex.Author
-  import Custom
   import Ecto.Query, only: [from: 2]
 
   def all(args, _info) do
