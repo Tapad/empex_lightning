@@ -1,5 +1,8 @@
 # Empex
 
+To search for authors by first name
+http://localhost:4000/?query={authors(first_name:david){id,first_name,last_name,email}}
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
