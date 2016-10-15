@@ -34,5 +34,28 @@ defmodule Empex.Schema do
       resolve &Empex.CommentResolver.find/2
     end
 
+    mutation do
+      field :author, type: :author do
+        arg :first_name, non_null(:string)
+        arg :last_name, non_null(:string)
+        arg :username, non_null(:string)
+        arg :email, :string
+
+        resolve &Empex.AuthorResolver.create/2
+      end
+
+      field :post, type: :post do
+        arg :title, non_null(:string)
+        arg :body, non_null(:string)
+
+        resolve &Empex.PostResolver.create/2
+      end
+
+      field :comment, type: :comment do
+        arg :text, non_null(:string)
+
+        resolve &Empex.CommentResolver.create/2
+      end
+    end
   end
 end

@@ -1,7 +1,11 @@
 # Empex
 
 To search for authors by first name
-http://localhost:4000/?query={authors(first_name:david){id,first_name,last_name,email}}
+GET http://localhost:4000/?query={authors(first_name:david){id,first_name,last_name,email}}
+
+
+To create a new author
+POST http://localhost:4000/?query=mutation CreateAuthor {author(first_name:"David",last_name:"Newell",username:"rustedgrail",email:"beta@alumni.rice.edu"){id,first_name}}
 
 To start your Phoenix app:
 

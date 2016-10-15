@@ -11,4 +11,10 @@ defmodule Empex.PostResolver do
       post -> {:ok, post}
     end
   end
+
+  def create(args, _info) do
+    %Post{}
+    |> Post.changeset(args)
+    |> Empex.Repo.insert
+  end
 end

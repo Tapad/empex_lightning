@@ -17,4 +17,10 @@ defmodule Empex.AuthorResolver do
       author -> {:ok, author}
     end
   end
+
+  def create(args, _info) do
+    %Author{}
+    |> Author.changeset(args)
+    |> Empex.Repo.insert
+  end
 end

@@ -11,4 +11,10 @@ defmodule Empex.CommentResolver do
       comment -> {:ok, comment}
     end
   end
+
+  def create(args, _info) do
+    %Comment{}
+    |> Comment.changeset(args)
+    |> Empex.Repo.insert
+  end
 end
