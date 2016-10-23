@@ -1,8 +1,17 @@
 defmodule Empex.CommentResolver do
   alias Empex.Comment
+  import Ecto.Query, only: [from: 2]
 
-  def all(_args, _info) do
-    {:ok, Empex.Repo.all(Comment)}
+  def all(args, _info) do
+    query = from c in Comment, preload: [:post, :author]
+
+    wheres = Enum.reduce(
+      args,
+      query,
+      fn({key, value}, query) -> from a in query, where: ^[{key, value}] end
+    )
+
+    {:ok, Empex.Repo.all(wheres)}
   end
 
   def find(%{id: id}, _info) do

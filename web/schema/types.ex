@@ -7,6 +7,8 @@ defmodule Empex.Schema.Types do
     field :body, :string
     field :inserted_at, :integer
     field :updated_at, :integer
+    field :author, :author
+    field :comment, list_of(:comment)
   end
 
   object :author do
@@ -16,11 +18,15 @@ defmodule Empex.Schema.Types do
     field :username, :string
     field :email, :string
     field :inserted_at, :integer
+    field :post, list_of(:post)
+    field :comment, list_of(:comment)
   end
 
   object :comment do
     field :id, :id
     field :text, :string
     field :inserted_at, :integer
+    field :post, :post
+    field :author, :author
   end
 end

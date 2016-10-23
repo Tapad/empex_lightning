@@ -4,6 +4,9 @@ defmodule Empex.Schema do
 
   query do
     field :posts, list_of(:post) do
+      arg :title, :string
+      arg :body, :string
+      arg :author, :author
       resolve &Empex.PostResolver.all/2
     end
 

@@ -6,6 +6,8 @@ defmodule Empex.Author do
     field :last_name, :string
     field :username, :string
     field :email, :string
+    has_many :post, Empex.Post
+    has_many :comment, Empex.Comment
 
     timestamps()
   end

@@ -5,6 +5,7 @@ defmodule Empex.Post do
     field :title, :string
     field :body, :string
     belongs_to :author, Empex.Author
+    has_many :comment, Empex.Comment
 
     timestamps()
   end
