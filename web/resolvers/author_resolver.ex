@@ -16,7 +16,7 @@ defmodule Empex.AuthorResolver do
 
   def find_by_id(%{id: id}, _info) do
     case Empex.Repo.get(Author, id) do
-      nil -> {:error, "Author id ${id} not found"}
+      nil -> {:error, "Author id #{id} not found"}
       author -> {:ok, author}
     end
   end

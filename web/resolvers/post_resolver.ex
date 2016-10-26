@@ -16,7 +16,7 @@ defmodule Empex.PostResolver do
 
   def find(%{id: id}, _info) do
     case Empex.Repo.get(Post, id) do
-      nil -> {:error, "Post id ${id} not found"}
+      nil -> {:error, "Post id #{id} not found"}
       post -> {:ok, post}
     end
   end

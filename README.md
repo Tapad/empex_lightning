@@ -1,5 +1,8 @@
 # Empex
 
+http://localhost:4000/?query={__schema{types{name}}}
+http://localhost:4000/?query={__type(name:%22Post%22){fields{name,type{kind,name}}}}
+
 To search for authors by first name
 GET http://localhost:4000/?query={authors(first_name:david){id,first_name,last_name,email}}
 

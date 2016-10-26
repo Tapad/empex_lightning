@@ -16,7 +16,7 @@ defmodule Empex.CommentResolver do
 
   def find(%{id: id}, _info) do
     case Empex.Repo.get(Comment, id) do
-      nil -> {:error, "Comment id ${id} not found"}
+      nil -> {:error, "Comment id #{id} not found"}
       comment -> {:ok, comment}
     end
   end
