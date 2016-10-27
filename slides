@@ -13,6 +13,8 @@
 
 
 
+                                   Using GraphQL for you're Elixir APIs
+                                               David Newell
 
 
 
@@ -20,7 +22,6 @@
 
 
 
-                                                                                      David Newell
 
 
 
@@ -41,7 +42,11 @@
 
 
 
+                                                 GraphQL
 
+                                             Statically Typed
+                                   Consumers choose the representation
+                                           Discoverable Schema
 
 
 
@@ -61,11 +66,7 @@
 
 
 
-                                                                                    GraphQL
 
-                                                                                Statically Typed
-                                                                          Consumers choose the representation
-                                                                              Discoverable Schema
 
 
 
@@ -73,41 +74,9 @@
 
 
 
+                                       Questions, find me later
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                Questions, find me later
-
-                                                                        https://github.com/Tapad/empex_lightning
+                               https://github.com/Tapad/empex_lightning
 
 
 
