@@ -12,15 +12,12 @@
 
 
 
-
                                    Using GraphQL for you're Elixir APIs
+
                                                David Newell
+                                            beta@alumni.rice.edu
 
-
-
-
-
-
+                                  https://github.com/Tapad/empex_lightning
 
 
 
@@ -47,9 +44,6 @@
                                              Statically Typed
                                    Consumers choose the representation
                                            Discoverable Schema
-
-
-
 
 
 
